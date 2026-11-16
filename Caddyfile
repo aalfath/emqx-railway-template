@@ -1,0 +1,16 @@
+{
+	admin off
+	auto_https off
+	servers {
+		trusted_proxies static 100.64.0.0/10 private_ranges
+	}
+}
+
+:{$PORT} {
+	# MQTT over WebSocket (wss://YOUR-DOMAIN/mqtt) goes to the EMQX ws listener.
+	@mqtt path /mqtt /mqtt/*
+	reverse_proxy @mqtt 127.0.0.1:8083
+
+	# Everything else is the EMQX dashboard and REST API.
+	reverse_proxy 127.0.0.1:18083
+}
