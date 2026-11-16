@@ -11,7 +11,7 @@ One service, built from this repo's `Dockerfile`:
   - `https://YOUR-DOMAIN/` is the EMQX dashboard (user `admin`).
   - `wss://YOUR-DOMAIN/mqtt` is MQTT over WebSocket.
 - **A TCP proxy on port 1883** for plain MQTT (`mqtt://HOST:PORT`, host and port shown in the service's Networking settings).
-- **A volume at `/opt/emqx/data`** for the built-in database: MQTT users, rules, retained settings and dashboard changes survive redeploys.
+- **A volume at `/opt/emqx/data`** for the built-in database: MQTT users, rules, retained messages and dashboard changes survive redeploys.
 
 ## Variables
 

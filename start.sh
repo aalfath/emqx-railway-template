@@ -50,6 +50,10 @@ authentication = [
     bootstrap_type = plain
   }
 ]
+
+## Added by the Railway template: keep retained messages on the volume, so
+## they survive redeploys (EMQX keeps them in memory by default).
+retainer.backend.storage_type = disc
 HOCON
 fi
 
