@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/emqx-1?utm_medium=integration&utm_source=button&utm_campaign=emqx)
+
 # EMQX on Railway
 
 A one-click [Railway](https://railway.com) template for [EMQX](https://www.emqx.com/), the MQTT broker for IoT devices and apps.
